@@ -5,3 +5,4 @@ main.py
 .idea
 chromedriver.exe
 .pyc
+.png

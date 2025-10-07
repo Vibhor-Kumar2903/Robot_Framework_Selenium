@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Resources/CommonKeyword.robot
+Resource    ../../Resources/CommonKeyword.robot
 
 *** Variables ***
 ${url}          https://testautomationpractice.blogspot.com/
@@ -13,7 +13,7 @@ ${drop_target}      id=droppable
 
 
 *** Test Cases ***
-Mouse_Hovering
+Mouse Hovering
     Open Browser To Landing Page    ${url}      ${browser}
     Sleep    2s
     Mouse Over    ${hover_point}

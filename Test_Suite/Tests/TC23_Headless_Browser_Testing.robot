@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Resources/CommonKeyword.robot
+Resource    ../../Resources/CommonKeyword.robot
 
 *** Variables ***
 ${url}                  https://testautomationpractice.blogspot.com/

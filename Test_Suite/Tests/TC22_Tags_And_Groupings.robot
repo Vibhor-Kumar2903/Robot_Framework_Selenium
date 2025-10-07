@@ -1,34 +1,32 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Resources/CommonKeyword.robot
+Resource    ../../Resources/CommonKeyword.robot
 
-Suite Setup         Log To Console    Opening Browser
-Suite Teardown      Log To Console    Closing Browser
+Suite Setup         Open Browser Without Arguments
+Suite Teardown      Close Browser
 
 Test Setup          Log To Console    Login Page
 Test Teardown       Log To Console    Logout Page
 
-
-*** Variables ***
-${url}              https://testautomationpractice.blogspot.com/
-${browser}          chrome
-
 *** Test Cases ***
 TC01
-    Open Browser To Landing Page    ${url}      ${browser}
-    Sleep    2s
+    [Tags]  Regression
     ${title}    Get Title
     Title Should Be    Automation Testing Practice
+    Log To Console    ${title}
 
 TC02
+    [Tags]  Sanity
     Input Text    id=name    Vibhor
     Sleep    2s
 
 TC03
+    [Tags]  Sanity
     Input Text    id=email    vibhor.kumar@gmail.com
     Sleep    2s
 
 TC04
+    [Tags]  Smoke
     Input Text    id=phone     8920097461
     Sleep    2s
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Library     ../Utilities/get_chrome_driver.py
-Resource    ../Resources/CommonKeyword.robot
+Resource    ../../Resources/CommonKeyword.robot
 
 *** Variables ***
 ${url}          https://testautomationpractice.blogspot.com/
